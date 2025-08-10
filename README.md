@@ -60,16 +60,6 @@ The system uses **inverted indexes**, multiple ranking functions, and weighting 
 
 ---
 
-## 📊 Key Results
-| Method | Precision | Avg. Runtime (sec) |
-|--------|-----------|--------------------|
-| Cosine Similarity (title=0.6, body=0.4) | 0.07467 | 9.58 |
-| BM25 (title=0.6, body=0.4) | 0.221 | ~3.0 |
-| BM25 + PageRank (0.6 BM25, 0.4 PR) | 0.33 | ~3.5 |
-| **Dynamic weights + PageRank (heap sort)** | **0.41347** | **2.62** |
-
----
-
 ## 📌 Observations
 - **Short queries** (1–2 tokens) perform best when using **title index** only.  
 - **Longer queries** (≥4 tokens) require **body index** for better recall.  
